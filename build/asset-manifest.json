@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/Ivannathanp/static/css/main.778eb134.chunk.css",
+    "main.js": "/Ivannathanp/static/js/main.873bf779.chunk.js",
+    "main.js.map": "/Ivannathanp/static/js/main.873bf779.chunk.js.map",
+    "runtime-main.js": "/Ivannathanp/static/js/runtime-main.7471a229.js",
+    "runtime-main.js.map": "/Ivannathanp/static/js/runtime-main.7471a229.js.map",
+    "static/js/2.4b479725.chunk.js": "/Ivannathanp/static/js/2.4b479725.chunk.js",
+    "static/js/2.4b479725.chunk.js.map": "/Ivannathanp/static/js/2.4b479725.chunk.js.map",
+    "index.html": "/Ivannathanp/index.html",
+    "static/css/main.778eb134.chunk.css.map": "/Ivannathanp/static/css/main.778eb134.chunk.css.map",
+    "static/js/2.4b479725.chunk.js.LICENSE.txt": "/Ivannathanp/static/js/2.4b479725.chunk.js.LICENSE.txt",
+    "static/media/Codenamecerberus.72eae9cd.png": "/Ivannathanp/static/media/Codenamecerberus.72eae9cd.png",
+    "static/media/Dompetku.ed84970f.png": "/Ivannathanp/static/media/Dompetku.ed84970f.png",
+    "static/media/Dompetku2.a20bb4ed.png": "/Ivannathanp/static/media/Dompetku2.a20bb4ed.png",
+    "static/media/Exploreindonesia.50fc376c.png": "/Ivannathanp/static/media/Exploreindonesia.50fc376c.png",
+    "static/media/Exploreindonesia2.fce2544f.png": "/Ivannathanp/static/media/Exploreindonesia2.fce2544f.png",
+    "static/media/Profile.c815afe2.png": "/Ivannathanp/static/media/Profile.c815afe2.png",
+    "static/media/Shopscut.f16893b5.png": "/Ivannathanp/static/media/Shopscut.f16893b5.png",
+    "static/media/Shopscut2.bd80a46c.png": "/Ivannathanp/static/media/Shopscut2.bd80a46c.png",
+    "static/media/Tombraider.dfdaa83b.jpg": "/Ivannathanp/static/media/Tombraider.dfdaa83b.jpg",
+    "static/media/Unix.d8f000b0.png": "/Ivannathanp/static/media/Unix.d8f000b0.png",
+    "static/media/contact.8ec77f03.png": "/Ivannathanp/static/media/contact.8ec77f03.png",
+    "static/media/exp1.04419991.png": "/Ivannathanp/static/media/exp1.04419991.png",
+    "static/media/exp2.38e5b816.png": "/Ivannathanp/static/media/exp2.38e5b816.png",
+    "static/media/exp3.c769f1b3.png": "/Ivannathanp/static/media/exp3.c769f1b3.png",
+    "static/media/HeroSection.css": "/Ivannathanp/static/media/img-home.c034239e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7471a229.js",
+    "static/js/2.4b479725.chunk.js",
+    "static/css/main.778eb134.chunk.css",
+    "static/js/main.873bf779.chunk.js"
+  ]
+}
