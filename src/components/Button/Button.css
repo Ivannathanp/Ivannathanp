@@ -1,0 +1,70 @@
+.button {
+    padding: 8px 20px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    cursor:pointer;
+}
+
+.button--Primary {
+    color: #393e46;
+    border-radius: 7px;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    border-bottom: 4px solid #112D4E;
+}
+
+.button--Outline {
+    background-color: transparent;
+    color: rgb(160, 160, 160);
+    padding: 8px 20px;
+    border-radius: 7px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button--More {
+    color: #3F72AF;
+    border-radius: 7px;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+.button--Medium {
+    padding: 10px 0px;
+    font-size: 20px;
+}
+
+.button--Large {
+    padding: 12px 26px;
+    font-size: 25px;
+}
+
+.button--Outline:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    color: #112D4E;
+}
+
+.button--Primary:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    color: #ffc62c;
+}
+
+.button--More:hover {
+    transform: translateX(20px);
+    transition: all 0.5s ease-in-out;
+    color: #112D4E;
+}
+
+@media screen and (max-width: 960px) {
+    .button--Medium {
+        padding: 10px 0px;
+        font-size: 17px;
+    }
+    
+    .button--Large {
+        padding: 12px 26px;
+        font-size: 20px;
+    }
+}

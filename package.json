@@ -1,0 +1,56 @@
+{
+  "name": "reactwebsite",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "emailjs-com": "^3.2.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.6.3",
+    "react": "^17.0.2",
+    "react-contact-form": "^0.0.1-rc.2",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3",
+    "react-scroll": "^1.8.4",
+    "react-scrollbars-custom": "^4.0.27",
+    "react-slideshow-image": "^3.5.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.3",
+    "styled-components": "^5.3.0",
+    "sweetalert2": "^11.1.5",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "dev": "nodemon Server.js",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
