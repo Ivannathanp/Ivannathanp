@@ -46,16 +46,12 @@ function Home() {
     }, 3000);
     setMessages("");
     console.log(process.env.REACT_APP_PUBLIC_KEY);
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_USER_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        form.current,
-        process.env.REACT_APP_PUBLIC_KEY
-      )
-      .then((error) => {
-        alert("An error occurred, Please try again", error.text);
-      });
+    emailjs.sendForm(
+      process.env.REACT_APP_USER_ID,
+      process.env.REACT_APP_TEMPLATE_ID,
+      form.current,
+      process.env.REACT_APP_PUBLIC_KEY
+    );
   }
 
   return (
@@ -243,33 +239,6 @@ function Home() {
           </div>
         </div>
 
-        {/* <div className="contactsection">
-        <div className="contactwrapper">
-          <div className="contactsection">
-            <h2 className="contactSubTitle">Contact Details</h2>
-            <p className="SmallSpacing" />
-            <p className="contactSubTitle">
-              {" "}
-              <i className="fa fa-phone" /> Phone : +62 89638303065
-            </p>
-            <p className="SmallSpacing" />
-            <p className="contactSubTitle">
-              {" "}
-              <i className="fa fa-inbox" /> Email : ivanparmenas@gmail.com{" "}
-            </p>
-            <p className="SmallSpacing" />
-          </div>
-          <div className="contactsection">
-            <p className="contactSubTitle"> Social Media </p>
-            <p className="contactSubTitle">
-              <i className="fab fa-line" /> Line : ivannathanparmenas
-            </p>
-            <p className="contactSubTitle">
-              <i className="fab fa-instagram" /> Instagram: ivan_nathan1
-            </p>
-          </div>
-        </div>
-      </div> */}
         <div className="footer-container">
           <section class="social-media">
             <div class="social-media-wrap">
