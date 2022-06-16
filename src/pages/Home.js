@@ -37,9 +37,14 @@ function Home() {
   const form = useRef();
   const [error, setError] = useState(false);
   const [messages, setMessages] = useState();
+  const [notif, setNotif] = useState(false);
 
-  const handleSubmit = (e) => {
-    setMessages();
+  function handleSubmit(values) {
+    setNotif(true);
+    setTimeout(() => {
+      setNotif(false);
+    }, 3000);
+    setMessages("");
     console.log(process.env.REACT_APP_PUBLIC_KEY);
     emailjs
       .sendForm(
@@ -48,15 +53,10 @@ function Home() {
         form.current,
         process.env.REACT_APP_PUBLIC_KEY
       )
-      .then(
-        (result) => {
-          alert("Message Sent, We will get back to you shortly", result.text);
-        },
-        (error) => {
-          alert("An error occurred, Please try again", error.text);
-        }
-      );
-  };
+      .then((error) => {
+        alert("An error occurred, Please try again", error.text);
+      });
+  }
 
   return (
     <>
@@ -184,7 +184,10 @@ function Home() {
                     .required("Required"),
                   user_name: Yup.string().required("Required"),
                 })}
-                onSubmit={handleSubmit}
+                onSubmit={(values, { resetForm }) => {
+                  handleSubmit(values);
+                  resetForm();
+                }}
               >
                 {({ errors, touched, isSubmitting }) => (
                   <Form ref={form} className="formik">
@@ -204,7 +207,10 @@ function Home() {
                         className="textarea"
                         placeholder="Message"
                         value={messages}
-                        onChange={(e) => setMessages(e.target.value)}
+                        onChange={(e) => {
+                          setMessages(e.target.value);
+                          setError(false);
+                        }}
                       ></textarea>
                       {error && (
                         <FormHelperText className="selecterror">
@@ -212,30 +218,24 @@ function Home() {
                         </FormHelperText>
                       )}
                     </FormControl>
-                    {/* {isSubmitting ? (
-                              <div className="orderbutton">
-                                <div className="loading">
-                                  <ThreeDots
-                                    color="#DEBA9D"
-                                    height={80}
-                                    width={80}
-                                  />
-                                </div>
-                                <span> Thanks for contacting me!</span>
-                              </div>
-                            ) : ( */}
-                    <button
-                      className="sendbutton"
-                      type="submit"
-                      onClick={() => {
-                        if (messages == null) {
-                          setError(true);
-                        }
-                      }}
-                    >
-                      Send
-                    </button>
-                    {/* )} */}
+                    {notif ? (
+                      <div className="notificationText">
+                        {" "}
+                        Thank you for contacting me!
+                      </div>
+                    ) : (
+                      <button
+                        className="sendbutton"
+                        type="submit"
+                        onClick={() => {
+                          if (messages == null) {
+                            setError(true);
+                          }
+                        }}
+                      >
+                        Send
+                      </button>
+                    )}
                   </Form>
                 )}
               </Formik>

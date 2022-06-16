@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8002af54.css",
+    "main.js": "/static/js/main.5e441c57.js",
+    "static/media/Profile.png": "/static/media/Profile.c815afe2d1d3fc3b6211.png",
+    "static/media/Exploreindonesia.png": "/static/media/Exploreindonesia.50fc376c0b7bb4eb9544.png",
+    "static/media/Codenamecerberus.png": "/static/media/Codenamecerberus.72eae9cd492e5bf32d3b.png",
+    "static/media/Exploreindonesia2.png": "/static/media/Exploreindonesia2.fce2544fcd99102f8706.png",
+    "static/media/img-home.jpg": "/static/media/img-home.c034239ee9a63564602b.jpg",
+    "static/media/Unix.png": "/static/media/Unix.d8f000b0712fc86b01e4.png",
+    "static/media/Shopscut.png": "/static/media/Shopscut.f16893b5122b005d9ad2.png",
+    "static/media/Dompetku2.png": "/static/media/Dompetku2.a20bb4ed59540fd12056.png",
+    "static/media/Dompetku.png": "/static/media/Dompetku.ed84970fb5f0bf8ee708.png",
+    "static/media/Shopscut2.png": "/static/media/Shopscut2.bd80a46ce8b06101fff1.png",
+    "static/media/exp2.png": "/static/media/exp2.38e5b816d9720d3655e9.png",
+    "static/media/exp3.png": "/static/media/exp3.c769f1b38b4cbd91ae98.png",
+    "static/media/contact.png": "/static/media/contact.8ec77f03bfb41784066e.png",
+    "static/media/Tombraider.jpg": "/static/media/Tombraider.dfdaa83bb0c337fdd425.jpg",
+    "static/media/exp1.png": "/static/media/exp1.04419991bb2d6950602e.png",
+    "static/media/exp4.png": "/static/media/exp4.ce942acb3b8473f2764c.png",
+    "index.html": "/index.html",
+    "main.8002af54.css.map": "/static/css/main.8002af54.css.map",
+    "main.5e441c57.js.map": "/static/js/main.5e441c57.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8002af54.css",
+    "static/js/main.5e441c57.js"
+  ]
+}
