@@ -11,9 +11,9 @@ import Indonesia from "../images/Exploreindonesia.png"
 function Cards() {
     return (
         <div className="cards">
-            <div className="cards__container">
-                <div className="cards__wrapper">
-                    <ul className="cards__items">
+            <div className="cards_container">
+
+                    <ul className="cards_items">
                         <CardItems src={Unix}
                             text='Unix File System Design'
                             label='File System' 
@@ -26,8 +26,8 @@ function Cards() {
                             text='The Raider of the Tomb'
                             label='Game' 
                             path='/TombRaider' />
-                    </ul>
-                    <ul className="cards__items">
+            
+               
                         <CardItems src={Dompet}
                             text='Dompetku: The Budgeting App'
                             label='Android App' 
@@ -40,8 +40,8 @@ function Cards() {
                             text='Explore Indonesia'
                             label='Website' 
                             path='/ExploreIndonesia' />
-                    </ul>
-                </div>
+                         </ul>
+              
             </div>
         </div>
     )

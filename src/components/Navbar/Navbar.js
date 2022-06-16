@@ -1,59 +1,131 @@
-import React,{useState} from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
-import ScrollToTop from "../../scrollToTop";
-
+import React, { useEffect, useState } from "react";
+import { Link } from "react-scroll";
+import "./Navbar.css";
+import $ from "jquery";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTypo3 } from "@fortawesome/free-brands-svg-icons";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
-    const [click, setClick] = useState(false);
-    const [navbar,setNavbar] = useState(false);
-    const handleClick = () => setClick(!click);
+  const [click, setClick] = useState(false);
+  const [navbar, setNavbar] = useState(false);
+  const handleClick = () => setClick(!click);
 
-    const closeMobileMenu = () => setClick(false);
+  const closeMobileMenu = () => setClick(false);
 
-    const changeBackground = () => {
-        if(window.scrollY >= 80){
-            setNavbar(true);
-        } else {
-            setNavbar(false);
-        }
-    };
+  useEffect(() => {
+    const container = document.getElementById("containerElement");
 
-    window.addEventListener('scroll', changeBackground);
+    if (container != null) {
+      container.addEventListener("scroll", () => changeBackground());
+    }
 
-    return (
-        <>
-            <nav className={navbar ? 'navbar active' : 'navbar'}>
-                <div className="navbar-container">
-                    <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                        MyPortfolio <i className="fab fa-typo3"></i>  
-                    </Link>
-                    <div className="menu-icon" onClick={handleClick}>
-                        <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-                    </div>
+    function changeBackground() {
+      if (container.scrollTop >= 80) {
+        setNavbar(true);
+      } else {
+        setNavbar(false);
+      }
+    }
+  });
 
-                    <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                        <li className="nav-item">
-                            <Link to="/About" className="nav-links" onClick={closeMobileMenu}>
-                                About Me
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/Works" className="nav-links" onClick={closeMobileMenu}>
-                                Experience
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/Contact" className="nav-links" onClick={closeMobileMenu}>
-                                Contact
-                            </Link>
-                        </li>
-                    </ul>                    
-                </div>
+  var selector = ".nav-menu li";
+  var selector2 = ".nav-home li";
+  $(selector).on("click", function () {
+    $(selector2).addClass("active2");
+    $(selector).removeClass("actived");
+    $(this).addClass("actived");
+  });
 
-            </nav>    
-        </>
-    )
+  $(selector2).on("click", function () {
+    $(selector2).removeClass("active2");
+    $(selector).removeClass("actived");
+    $(this).removeClass("active2");
+  });
+  return (
+    <>
+      <nav className={navbar ? "navbar active" : "navbar"}>
+        <div className="navbar-container">
+        <ul className="nav-home" >
+          <li className="nav-item">
+        <Link
+        style={{color:"#fff !important"}}
+                onClick={closeMobileMenu}
+                containerId="containerElement"
+                to="home"
+                spy={true}
+                smooth={true}
+                duration={100}
+              >
+         
+            MyPortfolio <FontAwesomeIcon icon={faTypo3} />
+          </Link>
+          </li>
+          </ul>
+          <div className="menu-icon" onClick={handleClick}>
+            <FontAwesomeIcon icon={click? faXmark : faBars}/>
+          
+          </div>
+
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+    
+            <li className="nav-item">
+              <Link
+                onClick={closeMobileMenu}
+                containerId="containerElement"
+
+                to="about"
+                spy={true}
+                smooth={true}
+                duration={100}
+              >
+                About Me
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                onClick={closeMobileMenu}
+                containerId="containerElement"
+       
+                to="works"
+                spy={true}
+                smooth={true}
+                duration={100}
+              >
+                Experience
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                onClick={closeMobileMenu}
+                containerId="containerElement"
+       
+                to="projects"
+                spy={true}
+                smooth={true}
+                duration={100}
+              >
+                Projects
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                onClick={closeMobileMenu}
+                containerId="containerElement"
+
+                to="contact"
+                spy={true}
+                smooth={true}
+                duration={100}
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </>
+  );
 }
 
-export default Navbar
+export default Navbar;

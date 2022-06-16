@@ -1,19 +1,22 @@
 import React from 'react';
 import { Button } from '../../components/Button/Button'
-import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
 import './sections.css'
 import '../../App.css'
 import Shop from "../../components/images/Shopscut2.png"
+import Footer from '../../components/Footer/Footer';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAnglesLeft } from '@fortawesome/free-solid-svg-icons';
 
 export default function ShopCUT() {
     return (
+        <>
         <div className='projectsection'>
         <div className="Row ">
             <div className="buttonhead">
-                <Link to='/Project'  style={{ textDecoration: 'none' }}>
-                    <Button buttonStyle="button--Primary" buttonSize='button--Medium'>
-                    <i className="fas fa-long-arrow-alt-left"></i> Back</Button>
-                </Link>
+            <HashLink  to="/#projects" >
+          <Button className='aboutButton' buttonStyle='button--More' buttonSize='button--Medium'><FontAwesomeIcon icon={faAnglesLeft}/> Back</Button>
+                    </HashLink >
                 <h1 className='projectTitle'> ShopScut </h1>
             </div>   
             <div className="projectColumn">
@@ -31,5 +34,7 @@ export default function ShopCUT() {
             <img className="ProjectImage" src={Shop} />
         </div>
     </div>    
+      <Footer/>
+      </>  
     );
 }
