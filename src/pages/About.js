@@ -146,7 +146,7 @@ function About() {
            
         </div>
         <div className="buttonhead">
-            <a href='https://drive.google.com/file/d/1ydtSRnTYjqQ9oipJ7L655mrJWmErkly5/view?usp=sharing' >
+            <a href='https://drive.google.com/file/d/109fwt4fbQ-0zNT51_SA003m3gbGWEswg/view?usp=sharing' >
                 <Button className='downloadButton' buttonStyle='button--Outline' buttonSize='button--Large'> Download My Resume </Button>
             </a>
             </div>
